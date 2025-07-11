@@ -289,6 +289,7 @@ function initializeParallax() {
     });
 }
 
+
 // Efectos de hover mejorados para proyectos
 document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
