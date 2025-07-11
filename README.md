@@ -1,1 +1,4 @@
-# YadidP.github.io
+# Portafolio Personal de Yadira Aracely Peredo Zeballos
+¡Bienvenido/a al repositorio del portafolio personal de Yadira Aracely Peredo Zeballos! Este sitio web está diseñado para mostrar mis habilidades, proyectos destacados e intereses como estudiante de Ingeniería de Sistemas.
+
+Puedes visitar la versión en vivo del portafolio aquí: YadidP.github.io
