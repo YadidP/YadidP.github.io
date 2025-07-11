@@ -3,213 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Presentación</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-            overflow: hidden; /* Oculta barras de desplazamiento */
-        }
-
-        .presentacion-container {
-            width: 90%; /* Ajusta el ancho según tu preferencia */
-            max-width: 1200px; /* Ancho máximo para pantallas grandes */
-            height: 70vh; /* Altura de la presentación */
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .slides-wrapper {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%; /* Cada diapositiva ocupa el ancho completo */
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .slide h1 {
-            color: #333;
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .slide h2 {
-            color: #555;
-            font-size: 2.2em;
-            margin-bottom: 15px;
-        }
-
-        .slide p {
-            color: #666;
-            font-size: 1.2em;
-            line-height: 1.6;
-            max-width: 80%;
-        }
-
-        .slide ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            width: 70%;
-        }
-
-        .slide ul li {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            color: #666;
-        }
-
-        .navigation-buttons {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .navigation-buttons button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .navigation-buttons button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Estilos específicos para contenido de ejemplo */
-        .slide.titulo {
-            background-color: #e0f7fa;
-        }
-
-        .slide.contenido-general {
-            background-color: #f8f9fa;
-        }
-
-        .slide.lista-ejemplo {
-            background-color: #e6ffee;
-        }
-
-        .slide.final {
-            background-color: #ffe0b2;
-        }
-    </style>
+    <title>Yadira Aracely Peredo Zeballos - Portafolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <div class="presentacion-container">
-        <div class="slides-wrapper" id="slidesWrapper">
-            <div class="slide titulo">
-                <h1>Título de la Presentación</h1>
-                <p>Tu Nombre o Nombre de la Empresa</p>
-                <p>Fecha: 11 de Julio de 2025</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YPZ</span>
             </div>
-
-            <div class="slide contenido-general">
-                <h2>Introducción</h2>
-                <p>Aquí puedes comenzar a explicar de qué tratará tu presentación.</p>
-                <p>Introduce los temas clave que abordarás en las siguientes diapositivas.</p>
-            </div>
-
-            <div class="slide lista-ejemplo">
-                <h2>Tema Principal Uno</h2>
-                <ul>
-                    <li>Primer punto importante del tema.</li>
-                    <li>Segundo punto relevante.</li>
-                    <li>Tercer detalle o subpunto.</li>
-                </ul>
-            </div>
-
-            <div class="slide contenido-general">
-                <h2>Tema Principal Dos</h2>
-                <p>Desarrolla aquí el segundo tema principal. Puedes usar párrafos, imágenes (si las añades más tarde con CSS).</p>
-                <p>Asegúrate de que la información sea concisa y fácil de digerir.</p>
-            </div>
-
-            <div class="slide final">
-                <h2>Conclusión</h2>
-                <p>Resume los puntos clave de tu presentación.</p>
-                <p>Ofrece una reflexión final o una llamada a la acción.</p>
-            </div>
-
-            <div class="slide titulo">
-                <h1>¡Gracias!</h1>
-                <h2>Preguntas?</h2>
-                <p>Contacto: tu_email@ejemplo.com</p>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="navigation-buttons">
-        <button onclick="prevSlide()">Anterior</button>
-        <button onclick="nextSlide()">Siguiente</button>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">¡Hola!</span>
+                    <span class="name">Soy Yadira Aracely</span>
+                    <span class="subtitle">Estudiante de Ingeniería de Sistemas</span>
+                </h1>
+                <p class="hero-description">
+                    Apasionada por la tecnología, el desarrollo de software y la innovación digital. 
+                    Actualmente cursando el tercer semestre en la UMSS.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Conoce más</a>
+                    <a href="#contact" class="btn btn-secondary">Contáctame</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="assets/img/profile.jpg" alt="Yadira Aracely Peredo Zeballos">
+                    </div>
+                    <div class="floating-icons">
+                        <i class="fab fa-java"></i>
+                        <i class="fab fa-python"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
 
-    <script>
-        const slidesWrapper = document.getElementById('slidesWrapper');
-        const slides = document.querySelectorAll('.slide');
-        let currentSlide = 0;
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="intro">
+                        Soy <strong>Yadira Aracely Peredo Zeballos</strong>, estudiante de <strong>Ingeniería de Sistemas</strong> 
+                        en la <strong>Universidad Mayor de San Simón (UMSS)</strong>, actualmente cursando el <strong>tercer semestre</strong>.
+                    </p>
+                    <p>
+                        Me apasiona la tecnología, el desarrollo de software y todo lo relacionado con la innovación digital. 
+                        Desde que inicié mi carrera, he trabajado en proyectos tanto académicos como personales, donde he podido 
+                        aplicar conocimientos en programación, diseño de interfaces, bases de datos y estructuras de datos.
+                    </p>
+                    <p>
+                        Uno de mis proyectos más destacados fue el desarrollo de un <strong>sistema de gestión para un supermercado</strong>, 
+                        el cual incluía funciones de registro de productos, manejo de usuarios, control de inventarios y bitácora de acciones 
+                        usando <strong>Java</strong>, <strong>JavaFX</strong> y <strong>JDBC</strong> para la conexión con base de datos.
+                    </p>
+                    <p>
+                        Además de mi formación técnica, tengo habilidades en el área de diseño, y me interesan temas como la 
+                        <strong>ciberseguridad</strong>, la <strong>inteligencia artificial</strong> y el <strong>desarrollo full-stack</strong>. 
+                        Estoy en constante aprendizaje y busco siempre mejorar mis habilidades tanto técnicas como blandas.
+                    </p>
+                    <p>
+                        En mi tiempo libre, disfruto mucho de tocar el <strong>piano</strong>, actividad que me permite desarrollar 
+                        creatividad, paciencia y disciplina.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Semestre Actual</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Proyectos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Idiomas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function showSlide(index) {
-            if (index >= slides.length) {
-                currentSlide = 0; // Volver al inicio
-            } else if (index < 0) {
-                currentSlide = slides.length - 1; // Ir al final
-            } else {
-                currentSlide = index;
-            }
-            slidesWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JDBC</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Frameworks y Herramientas</h3>
+                    <div class="skill-tags">
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">Visual Studio Code</span>
+                        <span class="tag">PlatformIO</span>
+                        <span class="tag">BlueJ</span>
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">Tinkercad</span>
+                        <span class="tag">ESP32</span>
+                    </div>
+                </div>
 
-        // Navegación con teclas de flecha
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowRight') {
-                nextSlide();
-            } else if (event.key === 'ArrowLeft') {
-                prevSlide();
-            }
-        });
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Seguridad</h3>
+                    <div class="skill-tags">
+                        <span class="tag">BCrypt Hashing</span>
+                        <span class="tag">Buenas Prácticas</span>
+                        <span class="tag">Ciberseguridad</span>
+                    </div>
+                </div>
 
-        // Inicializar la primera diapositiva
-        showSlide(0);
-    </script>
+                <div class="skill-category">
+                    <h3><i class="fas fa-language"></i> Idiomas</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Español</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Inglés</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/supermarket-system.jpg" alt="Sistema de Gestión de Supermercado">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema de Gestión de Supermercado</h3>
+                        <p>Sistema completo desarrollado en Java con JavaFX para la gestión de inventarios, usuarios y productos. Incluye interfaz estética, sistema de login y conexión a base de datos con buenas prácticas de programación orientada a objetos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JDBC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/banker-algorithm.jpg" alt="Algoritmo del Banquero">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Algoritmo del Banquero</h3>
+                        <p>Implementación en lenguaje C del algoritmo para evitar interbloqueos en sistemas operativos. Incluye interfaz de salida visual clara de matrices y análisis de estados seguros.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Algoritmos</span>
+                            <span class="tech-tag">Sistemas Operativos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/academic-modules.jpg" alt="Módulos Académicos">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Módulos Académicos Diversos</h3>
+                        <p>Colección de proyectos académicos que incluyen resolución de problemas con recursividad, manejo de estructuras de datos complejas, algoritmos de backtracking y optimización de código.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Algoritmos</span>
+                            <span class="tech-tag">Estructuras de Datos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="values">
+        <div class="container">
+            <h2 class="section-title">Intereses y Valores</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovación Tecnológica</h3>
+                    <p>Siempre en búsqueda de nuevas tecnologías y formas creativas de resolver problemas.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Resolución de Problemas</h3>
+                    <p>Me motiva enfrentar desafíos complejos y encontrar soluciones elegantes y eficientes.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Trabajo en Equipo</h3>
+                    <p>Creo en la colaboración y el intercambio de ideas para lograr mejores resultados.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Aprendizaje Constante</h3>
+                    <p>Comprometida con el crecimiento personal y profesional continuo.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Creatividad</h3>
+                    <p>Desarrollo mi lado creativo a través de la música y el diseño.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Conectemos!</h3>
+                    <p>¿Tienes algún proyecto en mente o quieres colaborar? No dudes en contactarme.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:yadira.peredo.30.3s4@gmail.com">yadira.peredo.30.3s4@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <span>Universidad Mayor de San Simón (UMSS)</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Cochabamba, Bolivia</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yadira Aracely Peredo Zeballos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
