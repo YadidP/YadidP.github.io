@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Oculta barras de desplazamiento */
+        }
+
+        .presentacion-container {
+            width: 90%; /* Ajusta el ancho según tu preferencia */
+            max-width: 1200px; /* Ancho máximo para pantallas grandes */
+            height: 70vh; /* Altura de la presentación */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%; /* Cada diapositiva ocupa el ancho completo */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .slide h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .slide h2 {
+            color: #555;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        .slide p {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 80%;
+        }
+
+        .slide ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            width: 70%;
+        }
+
+        .slide ul li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .navigation-buttons {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navigation-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos específicos para contenido de ejemplo */
+        .slide.titulo {
+            background-color: #e0f7fa;
+        }
+
+        .slide.contenido-general {
+            background-color: #f8f9fa;
+        }
+
+        .slide.lista-ejemplo {
+            background-color: #e6ffee;
+        }
+
+        .slide.final {
+            background-color: #ffe0b2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentacion-container">
+        <div class="slides-wrapper" id="slidesWrapper">
+            <div class="slide titulo">
+                <h1>Título de la Presentación</h1>
+                <p>Tu Nombre o Nombre de la Empresa</p>
+                <p>Fecha: 11 de Julio de 2025</p>
+            </div>
+
+            <div class="slide contenido-general">
+                <h2>Introducción</h2>
+                <p>Aquí puedes comenzar a explicar de qué tratará tu presentación.</p>
+                <p>Introduce los temas clave que abordarás en las siguientes diapositivas.</p>
+            </div>
+
+            <div class="slide lista-ejemplo">
+                <h2>Tema Principal Uno</h2>
+                <ul>
+                    <li>Primer punto importante del tema.</li>
+                    <li>Segundo punto relevante.</li>
+                    <li>Tercer detalle o subpunto.</li>
+                </ul>
+            </div>
+
+            <div class="slide contenido-general">
+                <h2>Tema Principal Dos</h2>
+                <p>Desarrolla aquí el segundo tema principal. Puedes usar párrafos, imágenes (si las añades más tarde con CSS).</p>
+                <p>Asegúrate de que la información sea concisa y fácil de digerir.</p>
+            </div>
+
+            <div class="slide final">
+                <h2>Conclusión</h2>
+                <p>Resume los puntos clave de tu presentación.</p>
+                <p>Ofrece una reflexión final o una llamada a la acción.</p>
+            </div>
+
+            <div class="slide titulo">
+                <h1>¡Gracias!</h1>
+                <h2>Preguntas?</h2>
+                <p>Contacto: tu_email@ejemplo.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation-buttons">
+        <button onclick="prevSlide()">Anterior</button>
+        <button onclick="nextSlide()">Siguiente</button>
+    </div>
+
+    <script>
+        const slidesWrapper = document.getElementById('slidesWrapper');
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0; // Volver al inicio
+            } else if (index < 0) {
+                currentSlide = slides.length - 1; // Ir al final
+            } else {
+                currentSlide = index;
+            }
+            slidesWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Navegación con teclas de flecha
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Inicializar la primera diapositiva
+        showSlide(0);
+    </script>
+
+</body>
+</html>
